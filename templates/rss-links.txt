@@ -1,0 +1,18 @@
+# list of rss websites
+https://blog.badsectorlabs.com/feeds/all.atom.xml
+https://blog.huntr.com/rss.xml
+https://blog.lum8rjack.com/index.xml
+https://blog.portswigger.net/feeds/posts/default
+https://isc.sans.edu/rssfeed.xml
+https://labs.jumpsec.com/feed/
+https://labs.nettitude.com/feed/
+https://labs.watchtowr.com/rss/
+https://research.openanalysis.net/feed.xml
+https://sensepost.com/rss.xml
+https://www.blackhillsinfosec.com/feed/
+https://www.mandiant.com/resources/blog/rss.xml
+https://www.netspi.com/blog/technical/feed/
+https://www.pentestpartners.com/security-blog/feed
+https://www.trustedsec.com/feed.rss
+https://www.zerodayinitiative.com/blog/?format=rss
+https://www.zerodayinitiative.com/rss/published/

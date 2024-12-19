@@ -1,0 +1,4 @@
+*:new: Posts from {{ .Date }} :new:*
+{{ range .Posts }}
+* {{ .Title }} | {{ .Link }}
+{{- end }}
