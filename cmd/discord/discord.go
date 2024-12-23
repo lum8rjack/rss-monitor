@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -16,7 +15,7 @@ import (
 
 var (
 	discordWebhook string
-	discordRegex   string = "https://discord.com/api/webhooks/[0-9]{18}/[0-9a-zA-Z-]{68})"
+	discordRegex   string = `https:\/\/discord.com\/api\/webhooks\/[0-9]+/[0-9a-zA-Z-_]+`
 )
 
 type DiscordWebhook struct {
@@ -95,7 +94,6 @@ func NewDiscordWebhook(webhook string) (DiscordWebhook, error) {
 	if err != nil {
 		return dw, errors.New("error parsing regex")
 	}
-
 	if !match {
 		return dw, errors.New("invalid Discord webhook")
 	}
@@ -136,7 +134,7 @@ func (d *DiscordWebhook) SendWebhook(message string) error {
 			return err
 		}
 
-		return fmt.Errorf(string(responseBody))
+		return errors.New(string(responseBody))
 	}
 
 	return nil
