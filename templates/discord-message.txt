@@ -1,4 +1,8 @@
-*:new: Posts from {{ .Date }} :new:*
-{{ range .Posts }}
-* {{ .Title }} | {{ .Link }}
-{{- end }}
+{{ if gt (len .Posts) 0 }}
+    *:new: Posts from {{ .Date }} :new:*
+    {{ range .Posts }}
+    * {{ .Title }} | {{ .Link }}
+    {{- end }}
+{{ else }}
+    No New posts from {{ .Date }}
+{{ end }}

@@ -24,10 +24,6 @@ func GenerateMessage(templateFile string, posts []Post) (string, error) {
 		return "", errors.New("must provide a template file")
 	}
 
-	if len(posts) == 0 {
-		return "", errors.New("no posts provided")
-	}
-
 	now := time.Now()
 	fd := FormData{
 		Date:  now.Format("2006-01-02"),
@@ -43,5 +39,5 @@ func GenerateMessage(templateFile string, posts []Post) (string, error) {
 
 	var buf bytes.Buffer
 	err = t.ExecuteTemplate(&buf, name, fd)
-	return buf.String(), nil
+	return buf.String(), err
 }

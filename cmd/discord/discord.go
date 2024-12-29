@@ -51,32 +51,29 @@ var DiscordCmd = &cobra.Command{
 		posts, err := utils.GetRssUpdates(ba.RssFile, ba.Timewindow)
 		utils.CheckError(err)
 
-		// Send message
-		if len(posts) > 0 {
-			ba.Logger.Info("received posts", "number", len(posts))
+		ba.Logger.Info("received posts", "number", len(posts))
 
-			// Create message from template
-			message, err := utils.GenerateMessage(ba.TemplateFile, posts)
-			if err != nil {
-				ba.Logger.Error(err.Error(), "template_file", ba.TemplateFile)
-				os.Exit(0)
-			}
-			ba.Logger.Debug("generated message from template file", "template_file", ba.TemplateFile)
-
-			if message == "" {
-				ba.Logger.Info("empty message, not sending to webhook")
-				os.Exit(0)
-			}
-
-			// Create message
-			err = dwh.SendWebhook(message)
-			if err != nil {
-				ba.Logger.Error(err.Error())
-				os.Exit(0)
-			}
-
-			ba.Logger.Info("successfully sent Discord webhook")
+		// Create message from template
+		message, err := utils.GenerateMessage(ba.TemplateFile, posts)
+		if err != nil {
+			ba.Logger.Error(err.Error(), "template_file", ba.TemplateFile)
+			os.Exit(0)
 		}
+		ba.Logger.Debug("generated message from template file", "template_file", ba.TemplateFile)
+
+		if message == "" {
+			ba.Logger.Info("empty message, not sending to webhook")
+			os.Exit(0)
+		}
+
+		// Create message
+		err = dwh.SendWebhook(message)
+		if err != nil {
+			ba.Logger.Error(err.Error())
+			os.Exit(0)
+		}
+
+		ba.Logger.Info("successfully sent Discord webhook")
 
 	},
 }
