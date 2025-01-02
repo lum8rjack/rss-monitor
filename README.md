@@ -75,8 +75,9 @@ The rss-monitor application takes in the following:
 - rss links
 - service - which service you would like to post to
 
-The following services are currently the only supported services.
+The following services are currently supported:
 - Discord
+- Email
 - Slack
 
 Below is an example of checking each RSS feed for articles posted in the last 24 hours and sending a message using a Discord webhook.
