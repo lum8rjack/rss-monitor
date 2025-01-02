@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/lum8rjack/RSS-Monitor/cmd/discord"
+	"github.com/lum8rjack/RSS-Monitor/cmd/email"
 	"github.com/lum8rjack/RSS-Monitor/cmd/slack"
 	"github.com/spf13/cobra"
 )
@@ -34,6 +35,7 @@ func Execute() {
 func addSubcommandPallets() {
 	rootCmd.AddCommand(discord.DiscordCmd)
 	rootCmd.AddCommand(slack.SlackCmd)
+	rootCmd.AddCommand(email.EmailCmd)
 }
 
 func init() {

@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -38,12 +37,8 @@ var SlackCmd = &cobra.Command{
 		ba, err := utils.GetArgsData(cmd)
 		utils.CheckError(err)
 
-		// Slack specific arguments
-		webhook, err := cmd.Flags().GetString("webhook")
-		utils.CheckError(err)
-
 		// Create the Slack struct
-		swh, err := NewSlackWebhook(webhook)
+		swh, err := NewSlackWebhook(slackWebhook)
 		if err != nil {
 			ba.Logger.Error(err.Error())
 			os.Exit(0)
@@ -145,7 +140,7 @@ func (d *SlackWebhook) SendWebhook(message string) error {
 			return err
 		}
 
-		return fmt.Errorf(string(responseBody))
+		return errors.New(string(responseBody))
 	}
 
 	return nil

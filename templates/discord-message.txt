@@ -4,5 +4,5 @@
     * {{ .Title }} | {{ .Link }}
     {{- end }}
 {{ else }}
-    No New posts from {{ .Date }}
+    No New Posts from {{ .Date }}
 {{ end }}

@@ -11,6 +11,7 @@ Usage:
 
 Available Commands:
   discord     Discord webhook notification
+  email       Email notification
   help        Help about any command
   slack       Slack webhook notification
 
@@ -87,8 +88,6 @@ Below is an example of checking each RSS feed for articles posted in the last 24
 ## Future Improvements
 
 - Build in a cron scheduler to run on a routine basis without setting up crontabs in Linux
-- Add additional services:
-    - email
 
 ## References
 

@@ -36,12 +36,8 @@ var DiscordCmd = &cobra.Command{
 		ba, err := utils.GetArgsData(cmd)
 		utils.CheckError(err)
 
-		// Discord specific arguments
-		webhook, err := cmd.Flags().GetString("webhook")
-		utils.CheckError(err)
-
 		// Create the Discord struct
-		dwh, err := NewDiscordWebhook(webhook)
+		dwh, err := NewDiscordWebhook(discordWebhook)
 		if err != nil {
 			ba.Logger.Error(err.Error())
 			os.Exit(0)
