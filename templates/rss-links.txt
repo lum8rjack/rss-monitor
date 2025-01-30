@@ -16,3 +16,4 @@ https://www.pentestpartners.com/security-blog/feed
 https://www.trustedsec.com/feed.rss
 https://www.zerodayinitiative.com/blog/?format=rss
 https://www.zerodayinitiative.com/rss/published/
+https://rhinosecuritylabs.com/feed/
