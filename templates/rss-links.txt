@@ -17,3 +17,4 @@ https://www.trustedsec.com/feed.rss
 https://www.zerodayinitiative.com/blog/?format=rss
 https://www.zerodayinitiative.com/rss/published/
 https://rhinosecuritylabs.com/feed/
+https://blog.scrt.ch/feed/
