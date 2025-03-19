@@ -18,3 +18,5 @@ https://www.zerodayinitiative.com/blog/?format=rss
 https://www.zerodayinitiative.com/rss/published/
 https://rhinosecuritylabs.com/feed/
 https://blog.scrt.ch/feed/
+https://www.atredis.com/blog?format=rss
+https://www.elastic.co/security-labs/rss/feed.xml
