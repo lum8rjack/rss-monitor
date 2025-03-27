@@ -20,3 +20,4 @@ https://rhinosecuritylabs.com/feed/
 https://blog.scrt.ch/feed/
 https://www.atredis.com/blog?format=rss
 https://www.elastic.co/security-labs/rss/feed.xml
+https://rhinosecuritylabs.com/feed/
